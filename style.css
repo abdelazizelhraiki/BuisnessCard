@@ -42,7 +42,7 @@ body {
     right: clamp(16px, 5vw, 32px);
     bottom: clamp(15px, 5vw, 30px);
     display: grid;
-    gap: 8px;
+    gap: 6px;
     width: min(80%, 400px);
     background: transparent;
 }
@@ -50,7 +50,7 @@ body {
 .row {
     display: flex;
     align-items: center;   /* 💥 FIX: perfect vertical alignment */
-    gap: 6px;
+    gap: 4px;
 }
 
 .icon {
