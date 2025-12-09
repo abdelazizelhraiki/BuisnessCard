@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="hero">
         <img class="hero-image" src="cv.jpg" alt="Profile" onerror="this.style.display='none'">
         <div class="overlay">
-            <div class="row">
-                <span class="icon" aria-hidden="true"></span>
-                <a class="contact" href="tel:+212661373960">+212 661 37 39 60</a>
+
+
+            <!-- Phone -->
+             <div class="row phone" style="margin-top: 9px; margin-left: -2px;">
+           
+                <a href="tel:+212661373960" class="contact">+212 661 37 39 60</a>
             </div>
-            <div class="row">
-                <span class="icon" aria-hidden="true"></span>
-                <a class="contact" href="mailto:a.elhraiki@iav.ac.ma">a.elhraiki@iav.ac.ma</a>
+
+            <!-- Email -->
+            <div class="row email" style="margin-top: -5px; margin-left: -2px;">
+                <a href="mailto:a.elhraiki@iav.ac.ma" class="contact">a.elhraiki@iav.ac.ma</a>
             </div>
-            <div class="row">
-                <span class="icon" aria-hidden="true"></span>
-                <a class="contact" href="https://www.iav.ac.ma" target="_blank" rel="noopener">www.iav.ac.ma</a>
+
+            <!-- Website -->
+            <div class="row web" style="margin-top: 9px; margin-left: -2px;">
+                <a href="https://www.iav.ac.ma" class="contact">www.iav.ac.ma</a>
             </div>
+
         </div>
     </div>
 </body>
