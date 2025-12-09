@@ -5,59 +5,27 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
+    background: #ffffff;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    overflow: hidden;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 100%;
     width: 100%;
-}
-
-.card-wrapper {
-    background: white;
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
-
-h1 {
-    color: #333;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-}
-
-.card-image {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.card-image img {
-    max-width: 100%;
+.container img {
+    max-width: 95vw;
+    max-height: 95vh;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.card-image img:hover {
-    transform: scale(1.02);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-    
-    .card-wrapper {
-        padding: 20px;
-    }
+    width: auto;
+    display: block;
 }
