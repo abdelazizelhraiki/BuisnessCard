@@ -69,8 +69,9 @@ body {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 5px solid;
-    border-image: linear-gradient(135deg, var(--accent-red) 0%, #8b1a27 100%) 1;
+    padding: 5px;
+    background: linear-gradient(180deg, var(--primary-color) 0%, var(--accent-red) 100%);
+    box-sizing: border-box;
 }
 
 .profile-name {
