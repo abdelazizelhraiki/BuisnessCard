@@ -35,23 +35,23 @@ body {
 
 .overlay {
     position: absolute;
-    left: 50%;
+    right: clamp(16px, 5vw, 32px);
     bottom: clamp(8px, 2vw, 16px);
-    transform: translateX(-50%);
     display: grid;
-    gap: 10px;
-    background: #fff;
-    padding: 12px 14px;
-    border-radius: 12px;
-    width: min(92%, 520px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    gap: 8px;
+    padding: 6px 0;
+    width: min(80%, 400px);
+    background: transparent;
+    box-shadow: none;
+    text-align: left;
 }
 
 .row {
     display: grid;
     grid-template-columns: 28px 1fr;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
+    justify-items: start;
 }
 
 .address {
@@ -78,9 +78,10 @@ body {
 .contact {
     color: #0a0a0a;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 1.05rem;
+    font-weight: 400;
+    font-size: 0.95rem;
     word-break: break-word;
+    text-align: left;
 }
 
 .contact:hover {
