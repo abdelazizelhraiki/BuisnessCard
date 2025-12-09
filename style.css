@@ -45,46 +45,17 @@ body {
 }
 
 .profile {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 24px 0;
 }
-.avatar-ring {
+.avatar {
     width: 220px;
     height: 220px;
-    margin: 0 auto 16px;
-    border-radius: 50%;
-    padding: 4px;
-    background:
-        conic-gradient(#d32f2f 0 33%, #157347 33% 66%, #d32f2f 66% 100%);
-    display: grid;
-    place-items: center;
-}
-.avatar {
-    width: 210px;
-    height: 210px;
     border-radius: 50%;
     object-fit: cover;
     background: #eee;
-}
-.name {
-    font-size: 1.75rem;
-    font-weight: 800;
-    margin-top: 8px;
-}
-.title-en {
-    color: #d32f2f; /* IAV red */
-    font-weight: 800;
-    margin-top: 6px;
-}
-.name-ar {
-    font-size: 1.75rem;
-    font-weight: 800;
-    margin-top: 10px;
-}
-.title-ar {
-    color: #d32f2f;
-    font-weight: 800;
-    margin-top: 6px;
 }
 
 .contacts {
