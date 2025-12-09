@@ -3,34 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Card</title>
+    <title>Pr. Abdelaziz EL HRAIKI - Director</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="hero">
-        <img class="hero-image" src="cv.jpg" alt="Profile" onerror="this.style.display='none'">
-        <div class="overlay">
-
-
-            <!-- Phone -->
-            <div class="row phone">
-                <a href="tel:+212661373960" class="contact">+212 661 37 39 60</a>
+    <div class="container-fluid d-flex align-items-center justify-content-center min-vh-100 py-4">
+        <div class="card-simple">
+            <!-- Logo & Header -->
+            <div class="header-simple text-center">
+                <img src="logo.png" alt="IAV Logo" class="logo-simple">
+                <h3 class="institute-title">Hassan II, Agronomic and Veterinary Institute</h3>
+                <p class="institute-title-ar">معهد الحسن الثاني للزراعة و البيطرة</p>
             </div>
 
-            <!-- Email -->
-            <div class="row email">
-                <a href="mailto:a.elhraiki@iav.ac.ma" class="contact">a.elhraiki@iav.ac.ma</a>
+            <!-- Profile Image & Name -->
+            <div class="profile-simple text-center">
+                <img src="person.jpeg" alt="Pr. Abdelaziz EL HRAIKI" class="profile-pic">
+                <h1 class="profile-name">Pr. Abdelaziz EL HRAIKI</h1>
+                <p class="profile-title">DIRECTOR</p>
+                <p class="profile-title-ar">مدير</p>
             </div>
 
-            <!-- Website -->
-            <div class="row web">
-                <a href="https://www.iav.ac.ma" class="contact" target="_blank" rel="noopener">www.iav.ac.ma</a>
+            <!-- Contact Information -->
+            <div class="contacts-simple">
+                <!-- Address -->
+                <div class="contact-line">
+                    <i class="fas fa-map-pin"></i>
+                    <div>
+                        <p class="contact-text">Madinat Al Irfane, P.O. Box 6202, Rabat-Instituts, Rabat, Morocco</p>
+                        <p class="contact-text-ar">مدينة العرفان ص.ب 6202 الرباط المعاهد، الرباط، المغرب</p>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="contact-line">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+212661373960" class="contact-text contact-link">+212 661 37 39 60</a>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-line">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:a.elhraiki@iav.ac.ma" class="contact-text contact-link">a.elhraiki@iav.ac.ma</a>
+                </div>
+
+                <!-- Website -->
+                <div class="contact-line">
+                    <i class="fas fa-globe"></i>
+                    <a href="https://www.iav.ac.ma" target="_blank" rel="noopener" class="contact-text contact-link">www.iav.ac.ma</a>
+                </div>
             </div>
 
+            <!-- Add to Contacts Button -->
+            <div class="text-center mt-3 mb-2">
+                <button class="btn-add-contact" onclick="downloadVCard()">
+                    <i class="fas fa-plus"></i> Add to Contacts
+                </button>
+            </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function downloadVCard() {
+            const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Pr. Abdelaziz EL HRAIKI
+TITLE:DIRECTOR
+ORG:Hassan II, Agronomic and Veterinary Institute
+TEL:+212661373960
+EMAIL:a.elhraiki@iav.ac.ma
+URL:https://www.iav.ac.ma
+ADR:;;Madinat Al Irfane, P.O. Box 6202;Rabat;Rabat;Morocco
+END:VCARD`;
+
+            const element = document.createElement('a');
+            element.setAttribute('href', 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vcard));
+            element.setAttribute('download', 'Pr_Abdelaziz_EL_HRAIKI.vcf');
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
 </body>
 </html>
