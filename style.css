@@ -32,26 +32,54 @@ body {
     border-radius: 4px;
 }
 
+
 .overlay {
     position: absolute;
     left: 50%;
-    bottom: clamp(6px, 2vw, 14px);
+    bottom: clamp(8px, 2vw, 16px);
     transform: translateX(-50%);
     display: grid;
-    gap: 6px;
+    gap: 10px;
     background: #fff;
-    padding: 10px 12px;
-    border-radius: 10px;
-    text-align: center;
-    width: min(82%, 340px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    padding: 12px 14px;
+    border-radius: 12px;
+    width: min(92%, 520px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.address {
+    align-items: start;
+}
+
+.icon {
+    font-size: 22px;
+    line-height: 22px;
+    color: #b42524;
+}
+
+.text p {
+    margin: 0;
+    color: #0a0a0a;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.text .ar {
+    margin-top: 2px;
 }
 
 .contact {
     color: #0a0a0a;
     text-decoration: none;
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     word-break: break-word;
 }
 
